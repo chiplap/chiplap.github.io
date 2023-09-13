@@ -49,6 +49,10 @@ body {
   background-color: var(--white-color);
 }
 
+.txt-default {
+  color: var(--white-color);
+}
+
 /* ================= HEADER ================ */
 header {
   display: flex;
@@ -117,6 +121,80 @@ header {
 }
 
 /* ================= MAIN ================ */
+
+/* ----- INTRODUCION ----- */
+
+.section-introduce {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: black;
+  color: hsl(9, 94%, 65%);
+  font-weight: bold;
+}
+
+.text-primary {
+	font-size: 2.2em;
+	display: table-cell; 
+	vertical-align: middle;
+	text-align: center;
+	opacity: 0;
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+
+.text{
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	position: absolute; 
+	display: table;
+}
+
+.t1{
+	animation: t-animation 6s;
+}
+
+.t2{
+	animation: t-animation 6s;
+	animation-delay: 6s;
+}
+
+.end{
+	animation: end-animation 2s;
+	animation-delay: 12s;
+	animation-fill-mode: forwards; 
+}
+
+.flicker{
+	animation: flicker 10s infinite;
+}
+
+@keyframes t-animation {
+	0% {opacity: 0;}
+	30% {opacity: 1;}
+	70% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes end-animation {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes flicker {
+	40.1% {left:0px;top:0px;}
+	40.2% {left:10px;top:8px;}
+	40.3% {left:0px;top:0px;}
+
+	90.1% {left:0px;top:0px;}
+	90.2% {left:-5px;top:3px;}
+	90.3% {left:0px;top:0px;}
+}
 
 /* -------- HOME SECTION -------------- */
 .section-1 {
@@ -348,7 +426,7 @@ input[type="submit"]:hover {
   font-weight: 300;
   font-size: 1.1rem;
   padding: 0.1rem 0;
-  color: var(--white-color-alt);
+  color: var(--white-color-alt) !important;
 }
 .footer-items h3:hover {
   text-decoration: underline;
@@ -362,10 +440,10 @@ input[type="submit"]:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--third-color);
+  background-color: var(--third-color) !important;
 }
 .copyright {
-  color: var(--white-color-alt);
+  color: var(--white-color-alt) !important;
   padding: 1rem 0;
   font-size: 0.9rem;
 }
@@ -558,7 +636,10 @@ input[type="submit"]:hover {
   }
 
   .footer-items h3 a{
-    color:var(--white-color);
+    color:var(--white-color) !important;
+  }
+  .footer-items h3 a p {
+    color:var(--white-color) !important;
   }
   .end-footer {
     display: flex;

@@ -553,6 +553,9 @@ input[type="submit"]:hover {
     font-size: 0.9rem;
   }
 
+  .footer-items h3 a{
+    color:var(--white-color);
+  }
   .end-footer {
     display: flex;
     flex-direction: column;

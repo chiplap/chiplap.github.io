@@ -120,6 +120,12 @@ header {
   display: none !important;
 }
 
+.product-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
 /* ================= MAIN ================ */
 
 /* ----- INTRODUCION ----- */
